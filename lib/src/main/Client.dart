@@ -68,6 +68,12 @@ class Client {
   /// Emitted when a message is edited.
   Stream<MessageUpdateEvent> onMessageUpdate;
 
+  /// Emitted when a reaction is created.
+  Stream<MessageReactionEvent> onMessageReaction;
+
+  /// Emitted when a reaction is removed.
+  Stream<MessageReactionsRemovedEvent> onMessageReactionsRemoved;
+
   /// Emitted when a message is deleted.
   Stream<MessageDeleteEvent> onMessageDelete;
 

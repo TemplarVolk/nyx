@@ -38,6 +38,8 @@ part 'src/main/events/PresenceUpdateEvent.dart';
 part 'src/main/events/RatelimitEvent.dart';
 part 'src/main/events/RawEvent.dart';
 part 'src/main/events/ReadyEvent.dart';
+part 'src/main/events/MessageReactionEvent.dart';
+part 'src/main/events/MessageReactionsRemovedEvent.dart';
 part 'src/main/events/RoleCreateEvent.dart';
 part 'src/main/events/RoleDeleteEvent.dart';
 part 'src/main/events/RoleUpdateEvent.dart';

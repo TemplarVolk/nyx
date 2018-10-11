@@ -33,6 +33,12 @@ class _EventController {
   /// Emitted when a message is edited.
   StreamController<MessageUpdateEvent> onMessageUpdate;
 
+  /// Emitted when a reaction is created.
+  StreamController<MessageReactionEvent> onMessageReaction;
+
+  /// Emitted when a reaction is removed.
+  StreamController<MessageReactionsRemovedEvent> onMessageReactionsRemoved;
+
   /// Emitted when a message is edited.
   StreamController<MessageDeleteEvent> onMessageDelete;
 
