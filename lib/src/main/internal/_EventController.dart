@@ -122,6 +122,12 @@ class _EventController {
     this.onMessageUpdate = new StreamController.broadcast();
     client.onMessageUpdate = this.onMessageUpdate.stream;
 
+    this.onMessageReaction = new StreamController.broadcast();
+    client.onMessageReaction = this.onMessageReaction.stream;
+
+    this.onMessageReactionsRemoved = new StreamController.broadcast();
+    client.onMessageReactionsRemoved = this.onMessageReactionsRemoved.stream;
+
     this.onMessageDelete = new StreamController.broadcast();
     client.onMessageDelete = this.onMessageDelete.stream;
 
