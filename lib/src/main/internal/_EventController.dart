@@ -195,6 +195,8 @@ class _EventController {
     await this.onReady.close();
     await this.onMessage.close();
     await this.onMessageUpdate.close();
+    await this.onMessageReaction.close();
+    await this.onMessageReactionsRemoved.close();
     await this.onMessageDelete.close();
     await this.onChannelCreate.close();
     await this.onChannelUpdate.close();

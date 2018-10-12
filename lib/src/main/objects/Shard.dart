@@ -211,6 +211,14 @@ class Shard {
             new MessageUpdateEvent._new(this._ws.client, json);
             break;
 
+          case 'MESSAGE_REACTION_REMOVE':
+            new MessageReactionsRemovedEvent._new(this._ws.client, json);
+            break;
+
+          case 'MESSAGE_REACTION_ADD':
+            new MessageReactionEvent._new(this._ws.client, json, false);
+            break;
+
           case 'GUILD_CREATE':
             new GuildCreateEvent._new(this._ws.client, json, this);
             break;
