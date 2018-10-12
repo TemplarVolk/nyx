@@ -13,11 +13,15 @@ class MessageReactionEvent {
 
   String emoji;
 
+  Map<String, dynamic> raw;
+
   MessageReactionEvent._new(
       Client client, Map<String, dynamic> json, bool added) {
-    this.user = client.users[json['d']['user_id']];
-    this.channel = client.channels[json['d']['channel_id']] as Channel;
-    this.message = client.channels[json['d']['channel_id']].messages[json['d']['id']];
+    // this.user = client.users[json['d']['user_id']];
+    // this.channel = client.channels[json['d']['channel_id']] as Channel;
+    // this.message = client.channels[json['d']['channel_id']].messages[json['d']['id']];
+
+    raw = json;
 
     emoji = json['d']['emoji']['name'];
     client._events.onMessageReaction.add(this);
